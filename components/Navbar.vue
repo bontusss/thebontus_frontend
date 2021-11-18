@@ -6,9 +6,11 @@
         <li>30°C,London</li>
       </ul>
       <div>
-        <a class="navbar-brand" href="#"
-          ><img src="~/assets/images/logo.png" alt=""
-        /></a>
+        <a class="navbar-brand" href="#">
+          <!-- <img src="~/assets/images/logo.png" alt="" -->
+          <p class="title text-secondary">The_Bontus</p>
+          /></a
+        >
       </div>
       <div class="d-flex">
         <ul class="navbar-right">
@@ -131,4 +133,8 @@ export default {
 
 <style>
 @import "~/assets/vendors/mdi/css/materialdesignicons.min.css";
+.title {
+  font-family: cursive;
+  font-size: 30px;
+}
 </style>
