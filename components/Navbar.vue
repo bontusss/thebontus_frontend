@@ -8,8 +8,7 @@
       <div>
         <a class="navbar-brand" href="#">
           <!-- <img src="~/assets/images/logo.png" alt="" -->
-          <p class="title text-secondary">The_Bontus</p>
-          /></a
+          <p class="title text-secondary font-weight-bold">The_Bontus.</p></a
         >
       </div>
       <div class="d-flex">
