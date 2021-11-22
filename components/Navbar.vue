@@ -3,48 +3,31 @@
     <div class="d-flex justify-content-around align-items-center navbar-top">
       <ul class="navbar-left">
         <li>{{ date }}</li>
-        <li>30°C,London</li>
       </ul>
       <div>
         <a class="navbar-brand" href="#">
           <!-- <img src="~/assets/images/logo.png" alt="" -->
-          <p class="title text-secondary font-weight-bold">The_Bontus.</p></a
+          <p class="title text-secondary font-weight-bold">The Bontus.</p></a
         >
       </div>
       <div class="d-flex">
         <ul class="navbar-right">
           <li>
-            <a href="#">ENGLISH</a>
+            <p class="tweet">
+              <i class="mdi mdi-twitter"></i
+              ><a
+                href="https://twitter.com/intent/tweet?text=Your%20one%20-%20stop%20-%20shop%20for%20news%20headlines%20https://thebontus.com%20(via%20@bontusss)"
+                >Tweet</a
+              >
+            </p>
           </li>
+          &nbsp;
           <li>
-            <a href="#">ESPAÑOL</a>
-          </li>
-        </ul>
-        <ul class="social-media">
-          <li>
-            <a href="#">
-              <i class="mdi mdi-instagram"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="mdi mdi-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="mdi mdi-youtube"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="mdi mdi-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="mdi mdi-twitter"></i>
-            </a>
+            <div
+              class="fb-share-button"
+              data-href="https://thebontus.com"
+              data-layout="button_count"
+            ></div>
           </li>
         </ul>
       </div>
@@ -132,8 +115,54 @@ export default {
 
 <style>
 @import "~/assets/vendors/mdi/css/materialdesignicons.min.css";
+@font-face {
+  font-family: chomsky;
+  src: url("~/static/fonts/Chomsky.woff");
+}
 .title {
-  font-family: cursive;
-  font-size: 30px;
+  font-family: chomsky;
+  font-size: 60px;
+}
+
+.tweet {
+  border: 0px;
+  background-color: #fff !important;
+  color: black !important;
+}
+
+.tweet a {
+  color: black !important;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.navbar-top {
+  padding: 30px 0 10px 0;
+}
+
+@media (max-width: 999px) {
+  .navbar-top {
+    margin-top: -10px;
+    margin-bottom: -40px;
+    border-bottom: 0px;
+  }
+
+  .title {
+    margin-top: -24px;
+    font-size: 50px;
+  }
+
+  .navbar .navbar-brand {
+    margin-left: -37px;
+  }
+
+  .navbar-bottom-menu .navbar-toggler {
+    top: 34px;
+    margin-right: 10px;
+  }
+
+  .navbar-bottom-menu {
+    border-bottom: 0px !important;
+  }
 }
 </style>

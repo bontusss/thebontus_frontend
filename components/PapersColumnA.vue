@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="row">
-        <Loader v-if="isLoading" />
+        <!-- <Loader v-if="isLoading" /> -->
         <div
           class="col-lg-3 col-6 mb-5 mb-sm-2"
           v-for="item in data.slice(0, 4)"

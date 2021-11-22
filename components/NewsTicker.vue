@@ -24,9 +24,9 @@
             "
           >
             <span
-              style="font-family: cursive"
-              class="d-flex align-items-center font-weight-bolder"
-              >&nbsp;The_Bontus.
+              
+              class="d-flex align-items-center font-weight-bolder n"
+              >&nbsp;The Bontus.
             </span>
           </div>
           <marquee
@@ -36,7 +36,7 @@
             onmouseover="this.stop();"
             onmouseout="this.start();"
           >
-            <Loader v-if="isLoading" />
+            <!-- <Loader v-if="isLoading" /> -->
             <a
               class="text-dark"
               v-for="(item, index) in shuffled"
@@ -50,6 +50,7 @@
         </div>
       </div>
     </div>
+    <topheader />
   </div>
 </template>
 
@@ -61,7 +62,7 @@ export default {
       data: [],
     };
   },
- 
+
   methods: {
     async getNews() {
       let res = await this.$store.dispatch("allStories");
@@ -83,6 +84,14 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: chomsky;
+  src: url("~/static/fonts/Chomsky.woff");
+}
+
+.n {
+  font-family: chomsky;
+}
 .news {
   width: 160px;
 }
@@ -101,4 +110,5 @@ export default {
   border-radius: 50%;
   display: inline-block;
 }
+
 </style>

@@ -2,8 +2,6 @@
   <div class="container-scroller">
     <div class="main-panel">
       <div class="container">
-        <!-- top row header here -->
-        <Topheader />
         <!-- <Slider /> -->
         <div class="cat_header">
           <h2>Nigeria</h2>
@@ -55,7 +53,14 @@
 </template>
 
 <script>
-  export default {};
+export default {
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 10000);
+    });
+  },
+};
 </script>
 
 <style lang="css" scoped>

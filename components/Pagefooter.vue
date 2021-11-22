@@ -55,7 +55,8 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="d-flex justify-content-between">
-            <img src="~/assets/images/logo.png" class="footer-logo" alt="" />
+            <!-- <img src="~/assets/images/logo.png" class="footer-logo" alt="" /> -->
+            <p class="title">The Bontus.</p>
 
             <div class="d-flex justify-content-end footer-social">
               <h5 class="m-0 font-weight-600 mr-3 d-none d-lg-flex">
@@ -134,7 +135,9 @@
 
 <script>
 import moment from "moment";
+import NewsTicker from "./NewsTicker.vue";
 export default {
+  components: { NewsTicker },
   data() {
     return {
       year: moment().format("YYYY"),
@@ -142,3 +145,13 @@ export default {
   },
 };
 </script>
+<style scoped>
+@font-face {
+  font-family: chomsky;
+  src: url("~/static/fonts/Chomsky.woff");
+}
+.title {
+  font-family: chomsky;
+  font-size: 30px;
+}
+</style>
