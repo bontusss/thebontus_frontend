@@ -7,7 +7,7 @@
         <div class="editors-news">
           <div class="row">
             <Loader v-if="isLoading" class="text-center" />
-            <div class="col-6 col-lg-3 mb-5 mb-sm-2" v-for="item in shuffled.slice(0, 12)" :key="item.id">
+            <div class="col-6 col-lg-3 mb-5 mb-sm-2" v-for="item in shuffled" :key="item.id">
               <a class="text-dark" :href="item.url">
                 <h5 class="i_title mt-3">
                   {{ item.title }}
@@ -42,6 +42,10 @@
 
     mounted() {
       this.getNews();
+      this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 5000);
+    });
     },
 
     computed: {

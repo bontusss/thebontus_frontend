@@ -13,7 +13,7 @@
               {{ item.title }}
             </h5>
           </a>
-          <p @click="linkTo(item.newspaper)">{{ item.newspaper }}</p>
+          <p>{{ item.newspaper }}</p>
         </div>
       </div>
     </div>
@@ -30,17 +30,9 @@ export default {
 
   methods: {
     async getNews() {
-      let res = await this.$store.dispatch("allNewspapers");
+      let res = await this.$store.dispatch("allTech");
       this.data = res.data;
       this.isLoading = false;
-    },
-    linkTo(sourcee) {
-      this.$router.push({
-        name: "source",
-        params: {
-          source: sourcee,
-        },
-      });
     },
   },
 
@@ -59,12 +51,5 @@ export default {
 p {
   font-size: 10px;
   float: right;
-  cursor: pointer;
-}
-
-p:hover {
-  text-decoration: underline;
-  color: grey;
-  transition: 0.4s;
 }
 </style>

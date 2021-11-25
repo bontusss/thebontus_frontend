@@ -5,7 +5,7 @@
         <!-- <Loader v-if="isLoading" /> -->
         <div
           class="col-6 col-lg-3 mb-5 mb-sm-2"
-          v-for="item in shuffled.slice(0, 12)"
+          v-for="item in data"
           :key="item.id"
         >
           <a class="text-dark" :href="item.url">
@@ -13,7 +13,6 @@
               {{ item.title }}
             </h5>
           </a>
-          <p @click="linkTo(item.newspaper)">{{ item.newspaper }}</p>
         </div>
       </div>
     </div>
@@ -29,23 +28,15 @@ export default {
   },
 
   methods: {
-    async getNews() {
-      let res = await this.$store.dispatch("allNewspapers");
-      this.data = res.data;
-      this.isLoading = false;
-    },
-    linkTo(sourcee) {
-      this.$router.push({
-        name: "source",
-        params: {
-          source: sourcee,
-        },
-      });
+    async fromSource() {
+      source = this.$router.params.source;
+      let res = await this.$axios.get(`/source/${source}`);
+      return res;
     },
   },
 
   mounted() {
-    this.getNews();
+    this.fromSource();
   },
 
   computed: {
@@ -55,16 +46,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-p {
-  font-size: 10px;
-  float: right;
-  cursor: pointer;
-}
-
-p:hover {
-  text-decoration: underline;
-  color: grey;
-  transition: 0.4s;
-}
-</style>
+<style scoped></style>

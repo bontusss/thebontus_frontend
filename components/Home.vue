@@ -9,42 +9,37 @@
         </div>
         <div class="cat_header">
           <h2>World</h2>
-          <RandomNewspaperColumn />
+          <RandomWorldNews />
         </div>
         <div class="cat_header">
           <h2>Sports</h2>
-          <RandomNewspaperColumn />
+          <RandomSportsNews />
         </div>
         <div class="cat_header">
           <h2>Entertainment</h2>
-
-          <RandomNewspaperColumn />
+          <RandomEntertainmentNews />
         </div>
         <div class="cat_header">
           <h2>Crypto</h2>
-
-          <RandomNewspaperColumn />
+          <RandomCryptoNews />
         </div>
         <div class="cat_header">
           <h2>Technology</h2>
-
-          <RandomNewspaperColumn />
+          <RandomTechNews />
         </div>
         <div>
           <h2 class="cat_header">Business</h2>
-
-          <RandomNewspaperColumn />
+          <RandomBusinessNews />
         </div>
-        <div class="cat_header">
+        <!-- <div class="cat_header">
           <h2>Blogs</h2>
-
-          <RandomNewspaperColumn />
-        </div>
-        <div class="cat_header">
+          <random-blog-news />
+        </div> -->
+        <!-- <div class="cat_header">
           <h2>Covid-19</h2>
 
           <RandomNewspaperColumn />
-        </div>
+        </div> -->
       </div>
       <!-- main-panel ends -->
       <!-- container-scroller ends -->
@@ -64,8 +59,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.cat_header {
-  margin-top: 30px;
+.container-scroller {
+  margin-top: 80px;
 }
 
 .cat_header > h2 {

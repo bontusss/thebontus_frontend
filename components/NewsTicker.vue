@@ -23,10 +23,8 @@
               news
             "
           >
-            <span
-              
-              class="d-flex align-items-center font-weight-bolder n"
-              >&nbsp;The Bontus.
+            <span class="d-flex align-items-center font-weight-bolder n"
+              >&nbsp; Bontus
             </span>
           </div>
           <marquee
@@ -110,5 +108,4 @@ export default {
   border-radius: 50%;
   display: inline-block;
 }
-
 </style>

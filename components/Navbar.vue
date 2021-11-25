@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="d-flex justify-content-around align-items-center navbar-top">
       <ul class="navbar-left">
         <li>{{ date }}</li>
@@ -7,7 +7,7 @@
       <div>
         <a class="navbar-brand" href="#">
           <!-- <img src="~/assets/images/logo.png" alt="" -->
-          <p class="title text-secondary font-weight-bold">The Bontus.</p></a
+          <p class="title text-secondary font-weight-bold">Bontus</p></a
         >
       </div>
       <div class="d-flex">
@@ -113,7 +113,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import "~/assets/vendors/mdi/css/materialdesignicons.min.css";
 @font-face {
   font-family: chomsky;
@@ -141,28 +141,33 @@ export default {
 }
 
 @media (max-width: 999px) {
-  .navbar-top {
-    margin-top: -10px;
-    margin-bottom: -40px;
-    border-bottom: 0px;
-  }
-
   .title {
-    margin-top: -24px;
     font-size: 50px;
-  }
-
-  .navbar .navbar-brand {
-    margin-left: -37px;
+    margin: -41px 0 0 10px;
   }
 
   .navbar-bottom-menu .navbar-toggler {
-    top: 34px;
+    top: 14px;
     margin-right: 10px;
+  }
+
+  .navbar-top {
+    border: 0;
   }
 
   .navbar-bottom-menu {
     border-bottom: 0px !important;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: white;
+    height: 70px;
+    display: flex;
   }
 }
 </style>
